@@ -26,6 +26,14 @@ script:
   - ls
   - chmod +x hello.sh
   - ./hello.sh
- 
+  
+notifications:
+  email:
+    recipients:
+      - rajputrao@gmail.com
+      - s329940@oslomet.no
+    on_success: never # default: change
+    on_failure: always # default: always 
+    
 after_script:
   - echo "End of Pipeline"
